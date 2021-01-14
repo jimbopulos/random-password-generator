@@ -3,16 +3,12 @@ var generateBtn = document.querySelector("#generate");
 
 // create arrays
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
-console.log(lowerCase);
 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-console.log(upperCase);
 
 var specials = [" ", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-console.log(specials);
 
 var numbers = "0123456789".split("");
-console.log(numbers);
 
 var passwordPool = [];
 
@@ -20,8 +16,10 @@ var generatedPassword = [];
 
 // generate password
 function generatePassword() {
-    var password = "fkjg4o5guhiguhi45ghu";
-    // ask the user how long they want password
+    // ask the user how long they want password (8-128 characters)
+    var passwordLength = prompt("How many characters long would you like the password to be? Please any amount from 8 to 128");
+    console.log(passwordLength);
+    
     // do they want numbers?
     // do they want lowercase letters?
     // do they want uppercase letters?
@@ -34,7 +32,7 @@ function generatePassword() {
     // ... 
 
     // return the password
-    return "fkjg4o5guhiguhi45ghu";
+    // return "fkjg4o5guhiguhi45ghu";
 }
 
 // Write password to the #password input
@@ -52,6 +50,9 @@ function writePassword() {
 // Add event listener to generate button
 // user clicks generate button
 generateBtn.addEventListener("click", writePassword);
+
+// call generatePassword function
+generatePassword();
 
 // generate password
 // when generate password but clickedd, user presented with a series of prompts for password criteria
