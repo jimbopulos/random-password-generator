@@ -47,12 +47,12 @@ function writePassword() {
 
 }
 
+// call generatePassword function
+generatePassword();
+
 // Add event listener to generate button
 // user clicks generate button
 generateBtn.addEventListener("click", writePassword);
-
-// call generatePassword function
-generatePassword();
 
 // generate password
 // when generate password but clickedd, user presented with a series of prompts for password criteria
