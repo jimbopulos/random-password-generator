@@ -1,28 +1,56 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// create array for lowercase letters
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// create arrays
+var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
+console.log(lowerCase);
 
-//create array for uppercase letters
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L","M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+console.log(upperCase);
 
-// create array for special characters
-var specChar = [" ", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+var specials = [" ", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+console.log(specials);
 
-// create array for numeric characters
-var numChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numbers = "0123456789".split("");
+console.log(numbers);
+
+var passwordPool = [];
+
+var generatedPassword = [];
+
+// generate password
+function generatePassword() {
+    var password = "fkjg4o5guhiguhi45ghu";
+    // ask the user how long they want password
+    // do they want numbers?
+    // do they want lowercase letters?
+    // do they want uppercase letters?
+    // do they want special characters?
+
+    // build a char set containing user choices
+    // randomly grab characters from char set
+    // place random char in password until we have password at specified length
+
+    // ... 
+
+    // return the password
+    return "fkjg4o5guhiguhi45ghu";
+}
 
 // Write password to the #password input
 function writePassword() {
+  // get the random password
   var password = generatePassword();
+  // get the element where password will live on page
   var passwordText = document.querySelector("#password");
-
+  
+  // put the password on the page
   passwordText.value = password;
 
 }
 
 // Add event listener to generate button
+// user clicks generate button
 generateBtn.addEventListener("click", writePassword);
 
 // generate password
