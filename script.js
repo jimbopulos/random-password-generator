@@ -13,10 +13,6 @@ var specChar = [" ", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-",
 // create array for numeric characters
 var numChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-console.log(lowerCase);
-console.log(upperCase);
-console.log(specChar);
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
