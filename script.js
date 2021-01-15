@@ -45,6 +45,18 @@ if (numbers) {
 };
 // console.log(allOptions);
 
+// will establish designated password length
+for (var i = 0; i < passwordLength; i++) {
+        // random password generated based on chosen Options
+        var randomIndex = Math.floor(Math.random() * passwordLength.length);
+        console.log(passwordLength[randomIndex]);
+        // string assembling using selected Options of characters
+        result += passwordLength[randomIndex];
+        console.log(result);
+    }
+    return result;
+
+
 // Write password to the #password input
 function writePassword() {
   // get the random password
