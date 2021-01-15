@@ -2,33 +2,77 @@
 var generateBtn = document.querySelector("#generate");
 
 // create arrays
-var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
+var lowerCaseOptions = "abcdefghijklmnopqrstuvwxyz";
 
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var upperCaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var specials = [" ", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+var symbolsOptions = " \"#$%&'()*+,-./:;<=>?@[\\]^_ `{|}~";
 
-var numbers = "0123456789".split("");
+var numbersOptions = "0123456789";
 
-var passwordPool = [];
-
-var generatedPassword = [];
+var newPassword = "";
+var allOptions = "";
 
 // set prompts
 var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128");
 
-var lowers = confirm("Would you like to include lowercase letters?");
+var lowerCase = confirm("Would you like to include lowercase letters?");
 
-var uppers = confirm("Would you like to include uppercase letters?");
+var upperCase = confirm("Would you like to include uppercase letters?");
 
 var symbols = confirm("Would you like to include symbols?");
 
-var numbys = confirm("Would you like to include numbers?");
+var numbers = confirm("Would you like to include numbers?");
+
+// if statements to concatenate strings for password
+if (lowerCase) {
+    allOptions = allOptions + lowerCase
+};
+
+if (upperCase) {
+    allOptions = allOptions += upperCase
+};
+
+// Write password to the #password input
+function writePassword() {
+  // get the random password
+  var password = generatePassword();
+  // get the element where password will live on page
+  var passwordText = document.querySelector("#password");
+  
+  // put the password on the page
+  passwordText.value = password;
+
+}
+
+// call generatePassword function
+generatePassword();
+
+// Add event listener to generate button
+// user clicks generate button
+generateBtn.addEventListener("click", writePassword);
+
+
 
 // generate password
-function generatePassword() {
-    // when generate password button is clicked, go to prompt
-    // ask the user how long they want password (8-128 characters)
+// when generate password but clicked, user presented with a series of prompts for password criteria
+
+// user prompted for password criteria
+// user selects which criteria to include in the password
+
+// user prompted for the length of the password
+// they chooses length of 8 characters min, 128 characters max
+
+// user prompted for character types to include in the password
+// can choose lowercase, uppercase, numeric, and/or special characters
+
+// as each prompt answered, input should be validated and at least one      character type should be selected
+
+// once all prompts answered, password that matches the selected criteria generated
+// password is either displayed in an alert or written to the page
+
+// // when generate password button is clicked, go to prompt
+    // // ask the user how long they want password (8-128 characters)
     // var passwordLength = prompt("How many characters long would you like the password to be? Please any amount from 8 to 128");
     // // else user enters value <8 or >128, alert to indicate required field
     // if (passwordLength < 8 || passwordLength > 128) {
@@ -43,7 +87,7 @@ function generatePassword() {
 
         // if yes
         // user chooses to include lowercase letters
-    }
+   // }
 
     // number chosen recorded and set for following fields
     // next prompt shows
@@ -75,40 +119,3 @@ function generatePassword() {
 
     // return the password
     // return " ";
-}
-
-// Write password to the #password input
-function writePassword() {
-  // get the random password
-  var password = generatePassword();
-  // get the element where password will live on page
-  var passwordText = document.querySelector("#password");
-  
-  // put the password on the page
-  passwordText.value = password;
-
-}
-
-// call generatePassword function
-generatePassword();
-
-// Add event listener to generate button
-// user clicks generate button
-generateBtn.addEventListener("click", writePassword);
-
-// generate password
-// when generate password but clicked, user presented with a series of prompts for password criteria
-
-// user prompted for password criteria
-// user selects which criteria to include in the password
-
-// user prompted for the length of the password
-// they chooses length of 8 characters min, 128 characters max
-
-// user prompted for character types to include in the password
-// can choose lowercase, uppercase, numeric, and/or special characters
-
-// as each prompt answered, input should be validated and at least one      character type should be selected
-
-// once all prompts answered, password that matches the selected criteria generated
-// password is either displayed in an alert or written to the page
