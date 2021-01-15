@@ -14,20 +14,34 @@ var passwordPool = [];
 
 var generatedPassword = [];
 
+// set prompts
+var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128");
+
+var lowers = confirm("Would you like to include lowercase letters?");
+
+var uppers = confirm("Would you like to include uppercase letters?");
+
+var symbols = confirm("Would you like to include symbols?");
+
+var numbys = confirm("Would you like to include numbers?");
+
 // generate password
 function generatePassword() {
     // when generate password button is clicked, go to prompt
     // ask the user how long they want password (8-128 characters)
-    var passwordLength = prompt("How many characters long would you like the password to be? Please any amount from 8 to 128");
-    // else user enters value <8 or >128, alert to indicate required field
-    if (passwordLength < 8 || passwordLength > 128) {
-        var invalid = alert("Please enter an amount from 8 to 128");
-        // redirect user to initial prompt
-        generatePassword();
-        // if user enters proper character amount
-    } else if (passwordLength >= 8 || passwordLength <= 128) {
-        // move to next prompt
-        var lowerCase = confirm("Would you like to include lowercase letters?");
+    // var passwordLength = prompt("How many characters long would you like the password to be? Please any amount from 8 to 128");
+    // // else user enters value <8 or >128, alert to indicate required field
+    // if (passwordLength < 8 || passwordLength > 128) {
+    //     var invalid = alert("Please enter an amount from 8 to 128");
+    //     // redirect user to initial prompt
+    //     generatePassword();
+    //     // if user enters proper character amount
+    // } else if (passwordLength >= 8 || passwordLength <= 128) {
+    //     // move to next prompt
+    //     // add lowercase letters?
+    //     var lowerCase = confirm("Would you like to include lowercase letters?");
+
+        // if yes
         // user chooses to include lowercase letters
     }
 
