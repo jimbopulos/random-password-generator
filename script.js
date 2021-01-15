@@ -13,7 +13,16 @@ var numbersOptions = "0123456789";
 var allOptions = " ";
 
 // set prompts
-var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128)");
+
+// var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128");
+
+// if (passwordLength < 8 || passwordLength > 128) {
+//     var invalid = alert("Please enter an amount from 8 to 128");
+//     // redirect user to initial prompt
+//     generatePassword();
+// } else if (passwordLength >= 8 || passwordLength <= 128) {
+//     // move to next prompt
+// };
 
 var lowerCase = confirm("Would you like to include lowercase letters?");
 
