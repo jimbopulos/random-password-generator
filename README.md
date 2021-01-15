@@ -10,4 +10,6 @@ Using JavaScript, we developed code to administer a completely random password b
 
 ![Randpassword3](screenshots/RandPassword3.png)
 
+![Randpassword4](screenshots/RandPassword4.png)
+
 - Try it yourself [here](https://jimbopulos.github.io/random-password-generator/)
