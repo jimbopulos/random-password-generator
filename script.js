@@ -10,8 +10,8 @@ var symbolsOptions = " \"#$%&'()*+,-./:;<=>?@[\\]^_ `{|}~";
 
 var numbersOptions = "0123456789";
 
-var newPassword = "";
-var allOptions = "";
+var newPassword = " ";
+var allOptions = " ";
 
 // set prompts
 var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128");
@@ -26,12 +26,24 @@ var numbers = confirm("Would you like to include numbers?");
 
 // if statements to concatenate strings for password
 if (lowerCase) {
-    allOptions = allOptions + lowerCase
+    allOptions += lowerCaseOptions
 };
+// console.log(allOptions);
 
 if (upperCase) {
-    allOptions = allOptions += upperCase
+    allOptions += upperCaseOptions
 };
+// console.log(allOptions);
+
+if (symbols) {
+    allOptions +=  symbolsOptions
+};
+// console.log(allOptions);
+
+if (numbers) {
+    allOptions += numbersOptions
+};
+// console.log(allOptions);
 
 // Write password to the #password input
 function writePassword() {
@@ -42,11 +54,7 @@ function writePassword() {
   
   // put the password on the page
   passwordText.value = password;
-
-}
-
-// call generatePassword function
-generatePassword();
+};
 
 // Add event listener to generate button
 // user clicks generate button
