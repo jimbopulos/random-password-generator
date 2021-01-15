@@ -4,10 +4,10 @@ Employees that handle sensitive data and work on public networks at a startup co
 
 Using JavaScript, we developed code to administer a completely random password based on several fields that the users themselves may choose from. These options, or fields, include: lowercase letters, uppercase letters, symbols and special characters, as well as numbers. We needed them to have the option to choose any one, several, or all fields and then provide them with a randomized password, based on their preference of characters.
 
-![Randpassword1](RandPassword1.png)
+![Randpassword1](screenshots/RandPassword1.png)
 
-![Randpassword2](RandPassword2.png)
+![Randpassword2](screenshots/RandPassword2.png)
 
-![Randpassword3](RandPassword3.png)
+![Randpassword3](screenshots/RandPassword3.png)
 
 - Try it yourself [here](https://jimbopulos.github.io/random-password-generator/)
