@@ -14,7 +14,7 @@ var allOptions = " ";
 
 // set prompts
 
-// var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128");
+var passwordLength = prompt("How many characters would you like? Choose an amount from 8 to 128");
 
 // if (passwordLength < 8 || passwordLength > 128) {
 //     var invalid = alert("Please enter an amount from 8 to 128");
