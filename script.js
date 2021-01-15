@@ -16,23 +16,40 @@ var generatedPassword = [];
 
 // generate password
 function generatePassword() {
+    // when generate password button is clicked, go to prompt
     // ask the user how long they want password (8-128 characters)
     var passwordLength = prompt("How many characters long would you like the password to be? Please any amount from 8 to 128");
     console.log(passwordLength);
-    
+    // number chosen recorded and set for following fields
+    // next prompt shows
+
     // do they want numbers?
+    // if yes, add numbers array, random selection
+    // Math.floor(Math.random() * numbers.length));
+    // else, no numbers included
+    // next prompt shows
+
     // do they want lowercase letters?
+    // if yes then add lowerCase array, random selection
+    // Math.floor(Math.random() * lowerCase.length));
+    // else, no lowercase letters included
+
     // do they want uppercase letters?
+    // if yes then add upperCase array, random selection
+    // Math.floor(Math.random() * upperCase.length));
+    // else, no uppercase letters included
+
     // do they want special characters?
+    // if yes, add specials array, random selection
+    // Math.floor(Math.random() * specials.length));
+    // else no special characters included
 
     // build a char set containing user choices
     // randomly grab characters from char set
     // place random char in password until we have password at specified length
 
-    // ... 
-
     // return the password
-    // return "fkjg4o5guhiguhi45ghu";
+    // return " ";
 }
 
 // Write password to the #password input
@@ -55,7 +72,7 @@ generatePassword();
 generateBtn.addEventListener("click", writePassword);
 
 // generate password
-// when generate password but clickedd, user presented with a series of prompts for password criteria
+// when generate password but clicked, user presented with a series of prompts for password criteria
 
 // user prompted for password criteria
 // user selects which criteria to include in the password
