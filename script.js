@@ -10,7 +10,6 @@ var symbolsOptions = " \"#$%&'()*+,-./:;<=>?@[\\]^_ `{|}~";
 
 var numbersOptions = "0123456789";
 
-var newPassword = " ";
 var allOptions = " ";
 
 // set prompts
@@ -45,17 +44,20 @@ if (numbers) {
 };
 // console.log(allOptions);
 
-// will establish designated password length
+function generatePassword() {
+    // declare var result
+    var randomPassword = "";
+    // will establish designated password length
 for (var i = 0; i < passwordLength; i++) {
-        // random password generated based on chosen Options
-        var randomIndex = Math.floor(Math.random() * passwordLength.length);
-        console.log(passwordLength[randomIndex]);
-        // string assembling using selected Options of characters
-        result += passwordLength[randomIndex];
-        console.log(result);
-    }
-    return result;
+    // random password generated based on chosen Options
+        randomPassword += allOptions.charAt(
+        Math.floor(Math.random() * passwordLength.length)
+        );
+    // string assembling using selected Options of characters
+    } return randomPassword;
+};
 
+console.log(generatePassword());
 
 // Write password to the #password input
 function writePassword() {
