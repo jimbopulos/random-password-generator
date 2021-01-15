@@ -19,13 +19,18 @@ function generatePassword() {
     // when generate password button is clicked, go to prompt
     // ask the user how long they want password (8-128 characters)
     var passwordLength = prompt("How many characters long would you like the password to be? Please any amount from 8 to 128");
-    // user entry
-    // if user enters value <8 or >128, alert to indicate required field
+    // else user enters value <8 or >128, alert to indicate required field
     if (passwordLength < 8 || passwordLength > 128) {
-        var invalid = alert("Please enter an amount from 8 to 128")
+        var invalid = alert("Please enter an amount from 8 to 128");
+        // redirect user to initial prompt
         generatePassword();
+        // if user enters proper character amount
+    } else if (passwordLength >= 8 || passwordLength <= 128) {
+        // move to next prompt
+        var lowerCase = confirm("Would you like to include lowercase letters?");
+        // user chooses to include lowercase letters
     }
-    // redirect user to initial prompt
+
     // number chosen recorded and set for following fields
     // next prompt shows
 
